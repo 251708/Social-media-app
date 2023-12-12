@@ -17,9 +17,9 @@ const MyLikes = () => {
   const [likedPosts, setLikedPosts] = useState<Post[]>([
     {
       id: 1,
-      name: 'John Doe',
-      photo: 'https://example.com/profile.jpg',
-      content: 'This is a liked post.',
+      name: 'Sakshi Singh',
+      photo: '',
+      content: 'This is my liked post',
       likes: 10,
       bookmarks: 5,
       isLiked: true,

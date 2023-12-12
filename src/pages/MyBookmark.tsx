@@ -17,8 +17,8 @@ const MyBookmarks = () => {
   const [bookmarkedPosts, setBookmarkedPosts] = useState<Post[]>([
     {
       id: 1,
-      name: 'Jane Smith',
-      photo: 'https://example.com/profile.jpg',
+      name: 'Sakshi Singh',
+      photo: '',
       content: 'This is a bookmarked post.',
       likes: 15,
       bookmarks: 8,

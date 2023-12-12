@@ -9,9 +9,9 @@ type Profile = {
 
 const Profile = () => {
   const [profile, setProfile] = useState<Profile>({
-    name: 'John Doe',
-    email: 'johndoe@example.com',
-    bio: 'A software developer.',
+    name: 'Sakshi Singh',
+    email: 'officialsakshi@example.com',
+    bio: 'A Front-end Web developer.',
   });
 
   const handleSave = (values: Profile) => {

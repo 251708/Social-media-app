@@ -68,8 +68,8 @@ const Home = () => {
           <Input.TextArea
             value={newPostContent}
             onChange={(e) => setNewPostContent(e.target.value)}
-            rows={4}
-            maxLength={200}
+            rows={10}
+            maxLength={400}
             placeholder="Write a new post..."
           />
         </Form.Item>
@@ -127,23 +127,5 @@ const Home = () => {
 
 export default Home;
 
-// Home.tsx
-/*import React from 'react';
 
-interface HomeProps {
-  // Define your props here
-}
-
-const Home: React.FC<HomeProps> = ({  }) => {
-  // Your component logic here
-  return (
-    <div>
-     
-      <h2>Welcome to the Home Page!</h2>
-    </div>
-  );
-};
-
-export default Home;
-*/
 
