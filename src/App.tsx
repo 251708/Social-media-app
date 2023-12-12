@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as  Router, Routes,Route,useNavigate } from "react-router-dom";
 import { BookOutlined, HomeOutlined, LikeOutlined, PoweroffOutlined, ProfileOutlined, UserOutlined } from '@ant-design/icons';
 import {  Menu } from 'antd';
+import Home from './pages/Home'
+import Profile from './pages/MyProfile'
 
 
 function App(){
@@ -56,6 +58,7 @@ function Footer(){
         navigate(key);
        }
       }}
+      defaultSelectedKeys={[window.location.pathname]}
       items={[
         {label:"Home",key:"/" ,icon:<HomeOutlined />},
         {label:" My Profile",key:"/Myprofile" ,icon:<ProfileOutlined />},
@@ -75,8 +78,8 @@ function Content() {
   return(
   <div>
     <Routes>
-      <Route path="/" element={<div>Home</div>}></Route>
-      <Route path="/Myprofile" element={<div>MyProfile</div>}></Route>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/Myprofile" element={<Profile />}></Route>
       <Route path="/Mylike" element={<div>MyLike</div>}></Route>
       <Route path="/MyBookmarks" element={<div>MyBookmarks</div>}></Route>
       <Route path="/Myposts" element={<div>MyPosts</div>}></Route>
