@@ -6,9 +6,15 @@ import {  Menu } from 'antd';
 
 function App(){
  return(
-  <div>
+  <div
+  style={{
+    display:"flex",
+    flexDirection:"column",
+    flex:1,
+    height:"100vh"
+  }}>
       <Header />
-      <div style={{display:'flex',flexDirection:'row'}}>
+      <div style={{display:'flex',flexDirection:'row',flex:1}}>
         <SideMenu />
        <Content />
       </div>
@@ -17,10 +23,26 @@ function App(){
  );
 }
 function Header(){
-  return<div style={{height:50,backgroundColor:"lightskyblue", color:'white',display:'flex',justifyContent:'center',alignItems:'center'}}>Header</div>
+  return<div style={{
+    height:50,
+    backgroundColor:"lightskyblue",
+     color:'white',
+     display:'flex',
+     justifyContent:'center',
+     alignItems:'center',
+     fontWeight:"bold",
+      }}>Header</div>
 }
 function Footer(){
-  return<div>Footer</div>
+  return<div style={{
+    height:50,
+    backgroundColor:"lightgray",
+     color:'Black',
+     display:'flex',
+     justifyContent:'center',
+     alignItems:'center',
+     fontWeight:"bold"
+     }}>Footer</div>
 }
   function SideMenu(){
     const navigate = useNavigate();
