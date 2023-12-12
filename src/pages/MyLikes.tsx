@@ -18,7 +18,7 @@ const MyLikes = () => {
     {
       id: 1,
       name: 'Sakshi Singh',
-      photo: '',
+      photo: 'https://ceacopiniones.es/wp-content/uploads/2019/03/user-8.png',
       content: 'This is my liked post',
       likes: 10,
       bookmarks: 5,
