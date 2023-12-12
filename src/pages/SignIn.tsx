@@ -64,7 +64,7 @@ export default SignIn;
 */
 import React, { useState } from "react";
 
-const Signin: React.FC = () => {
+const SignIn: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -107,6 +107,6 @@ const Signin: React.FC = () => {
   );
 };
 
-export default Signin;
+export default SignIn;
 
 

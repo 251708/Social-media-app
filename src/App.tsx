@@ -126,31 +126,88 @@ const App: React.FC = () => {
 
 export default App;
 */
-import React from 'react';
+/*import React from 'react';
 import {  Route, Routes } from 'react-router-dom';
 
 // Import your components for the different pages
-import Home from './pages/Home';
-import SignUp from './pages/Signup';
+
+import Signup from './pages/Signup';
 import SignIn from './pages/SignIn';
 import Sidebar from './pages/Sidebar';
 
 const App: React.FC = () => {
   return (
-    <div>
+   <div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/signin" element={<SignIn />} />
+     
+        <Route path="./pages/signup" element={<Signup />} />
+        <Route path="./pages/signin" element={<SignIn />} /> 
+        
       </Routes>
 
-      {/* Conditional rendering for sidebar */}
-      {window.location.pathname !== '/signup' && window.location.pathname !== '/signin' && <Sidebar />}
+      {window.location.pathname !== '/Signup' && window.location.pathname !== '/Signin' && <Sidebar />}
       </div>
   );
 };
 
 export default App;
+*/
+/*import React from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
+// Import your components for the different pages
+import Signup from './pages/Signup';
+import SignIn from './pages/SignIn';
+import Sidebar from './pages/Sidebar';
 
+const App: React.FC = () => {
+  const location = useLocation();
+
+  // Check if the current location is the Sign up or Sign in page
+  const isSignUpOrSignInPage = location.pathname === '/signup' || location.pathname === '/signin';
+
+  return (
+    <div>
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<SignIn />} />
+      </Routes>
+
+    
+      {!isSignUpOrSignInPage && <Sidebar />}
+    </div>
+  );
+};
+
+export default App;
+*/
+import React from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import Home from './pages/Home'; 
+// Import your components for the different pages
+import Signup from './pages/Signup';
+import SignIn from './pages/SignIn';
+import Sidebar from './pages/Sidebar';
+
+const App: React.FC = () => {
+  const location = useLocation();
+
+  // Check if the current location is the Sign up or Sign in page
+  const isSignUpOrSignInPage = location.pathname === './pages/Signup' || location.pathname === './pages/Signin';
+
+  return (
+    <div>
+   
+      {!isSignUpOrSignInPage && <Sidebar />}
+
+      <Routes>
+        <Route path ="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<SignIn />} />
+      </Routes>
+    </div>
+  );
+};
+
+export default App;
 

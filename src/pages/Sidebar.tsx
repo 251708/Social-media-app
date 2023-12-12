@@ -1,8 +1,8 @@
 import React from "react";
 import {    Routes,Route,useNavigate } from "react-router-dom";
-import { BookOutlined,  LikeOutlined, PoweroffOutlined, ProfileOutlined, UserOutlined } from '@ant-design/icons';
+import { BookOutlined,  HomeOutlined,  LikeOutlined, PoweroffOutlined, ProfileOutlined, UserOutlined } from '@ant-design/icons';
 import {  Menu } from 'antd';
-
+import Home  from "./Home";
 import Profile from './MyProfile'
 import MyLikes  from "./MyLikes";
 import MyPosts from "./MyPosts";
@@ -36,7 +36,7 @@ function Header(){
      justifyContent:'center',
      alignItems:'center',
      fontWeight:"bold",
-      }}>Header</div>
+      }}></div>
 }
 function Footer(){
   return<div style={{
@@ -47,7 +47,7 @@ function Footer(){
      justifyContent:'center',
      alignItems:'center',
      fontWeight:"bold"
-     }}>Footer</div>
+     }}></div>
 }
   function SideMenu(){
     const navigate = useNavigate();
@@ -66,7 +66,7 @@ function Footer(){
      
       defaultSelectedKeys={[window.location.pathname]}
       items={[
-       
+       {label:"Home" , key:"/" , icon:<HomeOutlined />},
         {label:" My Profile",key:"/Myprofile" ,icon:<ProfileOutlined />},
         {label:"My Like",key:"/Mylike" ,icon:<LikeOutlined />},
         {label:"My Bookmarks",key:"/MyBookmarks" ,icon:<BookOutlined />},
@@ -84,7 +84,7 @@ function Content() {
   return(
   <div>
     <Routes>
-      
+      <Route path="/" element= {<Home />}/>
       <Route path="/Myprofile" element={<Profile />}></Route>
       <Route path="/Mylike" element={<MyLikes />}></Route>
       <Route path="/MyBookmarks" element={<MyBookmarks />}></Route>
