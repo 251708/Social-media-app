@@ -17,7 +17,7 @@ function App(){
  );
 }
 function Header(){
-  return<div>Header</div>
+  return<div style={{height:50,backgroundColor:"lightskyblue", color:'white',display:'flex',justifyContent:'center',alignItems:'center'}}>Header</div>
 }
 function Footer(){
   return<div>Footer</div>
