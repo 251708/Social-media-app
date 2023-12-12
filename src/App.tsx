@@ -8,9 +8,9 @@ function App(){
  return(
   <div>
       <Header />
-      <div>
+      <div style={{display:'flex',flexDirection:'row'}}>
         <SideMenu />
-        <Content />
+       <Content />
       </div>
       <Footer />
     </div>
@@ -25,7 +25,7 @@ function Footer(){
   function SideMenu(){
     const navigate = useNavigate();
   return(
-    <div style={{display:'flex',flexDirection:'row'}}>
+   
       <Menu
       onClick={({key})=>{
        if(key === "signout"){
@@ -43,9 +43,10 @@ function Footer(){
         {label:"Signout",key:"/signout" ,icon:<PoweroffOutlined/>},
        ]}
       ></Menu>
-      <Content />
+    
   
-    </div>
+  
+
   );
 }
 function Content() {
