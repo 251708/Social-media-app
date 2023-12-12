@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { BrowserRouter as  Router, Routes,Route,useNavigate } from "react-router-dom";
 import { BookOutlined, HomeOutlined, LikeOutlined, PoweroffOutlined, ProfileOutlined, UserOutlined } from '@ant-design/icons';
 import {  Menu } from 'antd';
@@ -54,13 +54,15 @@ function Footer(){
   return(
    
       <Menu
-      onClick={({key})=>{
+       onClick={({key})=>{
        if(key === "signout"){
         
        }else{
         navigate(key);
        }
       }}
+      
+     
       defaultSelectedKeys={[window.location.pathname]}
       items={[
         {label:"Home",key:"/" ,icon:<HomeOutlined />},
@@ -93,3 +95,62 @@ function Content() {
 }
 
 export default App;
+*/
+
+
+/*import React from 'react';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+
+// Import your components for the different pages
+import Home from './pages/Home';
+import SignUp from './pages/Signup';
+import SignIn from './pages/SignIn';
+import Sidebar from './pages/Sidebar';
+
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
+       
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+
+ 
+      {window.location.pathname !== '/signup' && window.location.pathname !== '/signin' && <Sidebar />}
+    </BrowserRouter>
+  );
+};
+
+export default App;
+*/
+import React from 'react';
+import {  Route, Routes } from 'react-router-dom';
+
+// Import your components for the different pages
+import Home from './pages/Home';
+import SignUp from './pages/Signup';
+import SignIn from './pages/SignIn';
+import Sidebar from './pages/Sidebar';
+
+const App: React.FC = () => {
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
+      </Routes>
+
+      {/* Conditional rendering for sidebar */}
+      {window.location.pathname !== '/signup' && window.location.pathname !== '/signin' && <Sidebar />}
+      </div>
+  );
+};
+
+export default App;
+
+
+
