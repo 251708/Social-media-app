@@ -4,6 +4,9 @@ import { BookOutlined, HomeOutlined, LikeOutlined, PoweroffOutlined, ProfileOutl
 import {  Menu } from 'antd';
 import Home from './pages/Home'
 import Profile from './pages/MyProfile'
+import MyLikes  from "./pages/MyLikes";
+import MyPosts from "./pages/MyPosts";
+import MyBookmarks from "./pages/MyBookmark";
 
 
 function App(){
@@ -80,9 +83,9 @@ function Content() {
     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="/Myprofile" element={<Profile />}></Route>
-      <Route path="/Mylike" element={<div>MyLike</div>}></Route>
-      <Route path="/MyBookmarks" element={<div>MyBookmarks</div>}></Route>
-      <Route path="/Myposts" element={<div>MyPosts</div>}></Route>
+      <Route path="/Mylike" element={<MyLikes />}></Route>
+      <Route path="/MyBookmarks" element={<MyBookmarks />}></Route>
+      <Route path="/Myposts" element={<MyPosts />}></Route>
     </Routes>
   </div>
 
